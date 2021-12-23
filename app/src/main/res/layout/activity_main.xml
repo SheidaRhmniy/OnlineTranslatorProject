@@ -6,8 +6,8 @@
     android:layout_height="fill_parent"
     tools:context=".MainActivity"
     android:gravity="center"
-    android:orientation="horizontal"
-    android:background="#606adf">
+    android:orientation="vertical"
+    android:background="@color/maincolor">
 
     <ImageView
         android:id="@+id/logoimg"
