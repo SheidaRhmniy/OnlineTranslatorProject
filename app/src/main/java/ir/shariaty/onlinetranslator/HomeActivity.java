@@ -99,7 +99,7 @@ public class HomeActivity extends AppCompatActivity {
                             startActivity(result);
                         }
                         catch (Exception e){
-                            Toast.makeText(HomeActivity.this, "error occured", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(HomeActivity.this, "error occured. try again", Toast.LENGTH_SHORT).show();
                             e.printStackTrace();
                         }
 
