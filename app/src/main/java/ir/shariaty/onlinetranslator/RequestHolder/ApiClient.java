@@ -5,8 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String Base_URL="https://www.vajehyab.com/";
-    private static Retrofit retrofit=null;
+    public static final String Base_URL="http://api.vajehyab.com/v3/";
+    private static Retrofit retrofit;
 
     public static  Retrofit getClient(){
         if(retrofit==null){
@@ -18,7 +18,7 @@ public class ApiClient {
         return retrofit;
     }
 
-    private static ApiInterface apiInterface =retrofit.create(ApiInterface.class);
+    public static ApiInterface apiInterface =getClient().create(ApiInterface.class);
 
     public static ApiInterface getApiInterface(){
         return apiInterface;
