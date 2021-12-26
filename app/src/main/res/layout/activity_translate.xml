@@ -10,17 +10,32 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/showSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="source"
+            android:textSize="16dp"
+            android:layout_marginTop="-15dp"
+            android:textColor="#777777"/>
         <TextView
             android:id="@+id/showWord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="15dp"
             android:text="Word"
+            android:textStyle="bold"
             android:textAlignment="center"
-            android:textSize="25dp"
+            android:textSize="28dp"
             android:textColor="@color/black"/>
+
+
+
     </LinearLayout>
 
 
@@ -37,7 +52,7 @@
 
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="50dp"
             android:background="@drawable/book_ic"
             android:drawableLeft="@drawable/ic_book"
@@ -51,18 +66,53 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"/>
 
-        <TextView
-            android:id="@+id/showMeaning"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:textSize="22dp"
-            android:textColor="#FFF3E0"
-            android:text="simple"
-            android:lineSpacingExtra="5dp"
-            android:textAlignment="center"
-            android:justificationMode="inter_word"
-            android:layout_margin="30dp"/>
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp">
+            <ImageButton
+                android:id="@+id/Sharebtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_share"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:layout_gravity="right"
+                android:layout_margin="15dp"/>
+            <ImageButton
+                android:id="@+id/copybtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_copy"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:layout_gravity="right"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/showMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="30dp"
+                android:textColor="#000"
+                android:text="simple"
+                android:lineSpacingExtra="5dp"
+                android:textAlignment="center"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="40dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
 
 
 
