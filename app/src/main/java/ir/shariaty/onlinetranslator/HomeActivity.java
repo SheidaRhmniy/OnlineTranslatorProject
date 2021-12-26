@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     //response variabels container
-    String title,title_en,pron,source,text;
+    String title,title_en,source,text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,17 @@ public class HomeActivity extends AppCompatActivity {
                 langinducter=tvfromlang.getText().toString();
                 tvfromlang.setText(tvtolang.getText().toString());
                 tvtolang.setText(langinducter);
+
+                //hint text
+                if(inputtext.getHint().equals("Enter Text")){
+                    inputtext.setHint("متن را وارد كنيد");
+                    inputtext.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
+                }
+
+                else {
+                    inputtext.setHint("Enter Text");
+                    inputtext.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+                }
                 langDB();
 
             }
@@ -132,6 +143,7 @@ public class HomeActivity extends AppCompatActivity {
             return "en2fa";
         }
         else {
+            inputtext.setHint("متن را وارد كنيد");
             return "dehkhoda";
         }
     }
