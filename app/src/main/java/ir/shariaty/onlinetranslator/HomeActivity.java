@@ -129,7 +129,7 @@ public class HomeActivity extends AppCompatActivity {
     private Call<Model> getApiResponse(){
 
 
-        return  ApiClient.getApiInterface().getTranslateData("68404.IWDkRdkfz9SzV5i9vFfUhFiajuU1bwKeJN0LobIK"
+        return  ApiClient.getApiInterface().getTranslateData("68404.vDxMcwTkPBINNHc7Vo4eqEPcCQ5FRjIO32FY0LW6"
                 ,inputtext.getText().toString().trim()
                 ,"exact"
                 ,langDB());
